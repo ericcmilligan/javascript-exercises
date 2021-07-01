@@ -1,16 +1,18 @@
 const fibonacci = function(numtoloop) {
     numtoinc = numtoloop
-    total = 1
-    previousnumber = 0
+    total = 0
+    startnum = 1
     while (numtoinc > 0){
-        total = total + previousnumber 
+        temp = total;
+        console.log("this is the temp: " + temp)
+        total = total + startnum;
+        startnum = temp;
         numtoinc -= 1
-        previousnumber = total
     }
     return total;
 };
 
-console.log(fibonacci(4));
+console.log(fibonacci(10));
 
 
 module.exports = fibonacci;
