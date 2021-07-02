@@ -11,12 +11,15 @@ const books = [
 
 
 const getTheTitles = function(object) {
+  var titlelist = [];
    for(array in object){
-     title = object[array]["title"] 
-     console.log(title)
+     title = object[array]["title"]; 
+     titlelist.push(title);
    }
+   return console.log(titlelist);
 };
 
-getTheTitles(books)
+getTheTitles(books);
+
 
 module.exports = getTheTitles;
